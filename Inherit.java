@@ -10,7 +10,7 @@ class Publisher
 class Book extends Publisher
 {
 	String book;
-	Book(String pub, String boo)
+	Book(String pub,String boo)
 	{
 		super(pub);
 		book=boo;
@@ -22,10 +22,10 @@ class Literature extends Book
 	{
 		super(pub,boo);
 	}
-	void display();
+	void display()
 	{
 		System.out.println("Publisher:"+publisher);
-		System.out.println("Book"+book);
+		System.out.println("Book:"+book);
 	}
 }
 class Fiction extends Book
@@ -44,29 +44,29 @@ class Inherit
 {
 	public static void main(String args[])
 	{
-		System.out.println("Enter the no of Literature Book:");
+		System.out.println("Enter the No.of Literature Books;");
 		Scanner sc1=new Scanner(System.in);
-		int num1=sc1.nextInt();
+		int num=sc1.nextInt();
 		Literature arr[]=new Literature[num];
-		System.out.println("Enter the Literature Book details:");
-		int n=0;j=0;
+		System.out.println("Enter the Literature Book Details:");
+		int x=0,j=0;
 		Scanner sc=new Scanner(System.in);
 		for(int i=0;i<num;i++)
 		{
-			n=i+1;
-			System.out.println("\n"+x1+".");
-			System.out.println("\n Book");
+			x=i+1;
+			System.out.println("\n"+x);
+			System.out.println("\nBook:");
 			String boo=sc.next();
 			System.out.println("\nPublisher:");
 			String pub=sc.next();
 			arr[i]=new Literature(pub,boo);
 		}
-		System.out.println("Enter the no of Fiction Books:");
+		System.out.println("Enter the no.of Fiction Books");
 		int num1=sc1.nextInt();
 		Fiction arr1[]=new Fiction[num1];
-		System.out.println("Enter the Fiction Book Details:\n");
-		int x1=0;j1=0;
-		for (int i=0;i<num;i++)
+		System.out.println("Enter the Fiction Book Details\n");
+		int x1=0,j1=0;
+		for(int i=0;i<num1;i++)
 		{
 			x1=i+1;
 			System.out.println(x1);
@@ -74,24 +74,24 @@ class Inherit
 			String boo=sc.next();
 			System.out.println("Publisher:");
 			String pub=sc.next();
-			arr1[i]=new Fiction(pub.boo);
+			arr1[i]=new Fiction(pub,boo);		
 		}
 		sc.close();
 		sc1.close();
-		System.out.println("****Information of the Literature Books****");
+		System.out.println("****Informations of all the Literature Books***");
 		for(int i=0;i<num;i++)
 		{
-			j=j+1;
-			System.out.println("\n"+j);
-			arr[i].display();
+		j=j+1;
+		System.out.println("\n"+j);
+		arr[i].display();
 		}
-		System.out.println("****Information of all the Fiction Books****");
+		System.out.println("****Informations of all the Fiction Books****");
 		for(int i=0;i<num1;i++)
 		{
 			j1=i+1;
-			System.out.println("\n+j1");
-			arr[i].display();
+			System.out.println("\n"+j1);
+			arr1[i].display();
 		}
+		sc1.close();
 	}
 }
-
